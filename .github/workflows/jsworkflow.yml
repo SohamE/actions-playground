@@ -1,0 +1,15 @@
+name: Run js actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-js-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run-script
+        uses: ./.github/actions/jsLogger
+        with:
+          message: "Custom message"

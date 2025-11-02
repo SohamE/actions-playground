@@ -1,0 +1,9 @@
+name: Js Debug Action
+inputs:
+  message:
+    description: "The message to be logged"
+    required: true
+
+runs:
+  using: "node20"
+  main: index.js
