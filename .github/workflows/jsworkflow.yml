@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: checkout to branch
         uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
       - name: run-script
         uses: ./.github/actions/jsLogger
         with:
