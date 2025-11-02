@@ -9,6 +9,8 @@ jobs:
   run-js-script:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout to branch
+        uses: actions/checkout@v4
       - name: run-script
         uses: ./.github/actions/jsLogger
         with:
