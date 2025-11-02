@@ -1,5 +1,9 @@
-const core = require("@actions/core");
-
-core.info("This is an info message");
-core.debug("This is a debug message");
-console.log("This is a raw console log");
+import * as core from "@actions/core";
+import * as github from "@actions/github";
+try {
+  const message = core.getInput("message");
+  core.info(`Your Message: ${message}`);
+} catch (error) {
+  core.setFailed("Caught error");
+  core.setFailed(error.message);
+}
