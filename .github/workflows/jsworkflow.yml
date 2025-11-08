@@ -11,7 +11,7 @@ jobs:
     environment: Example Environment
     steps:
       - name: Print Github Env
-        run: echo "${{ toJson(env) }}"
+        run: env
       - name: Print Github secrets
         run: echo "${{ toJson(secrets) }}"
   run-js-script:
